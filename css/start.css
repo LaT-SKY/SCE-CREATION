@@ -1,0 +1,102 @@
+/* 开始容器 */
+.start {
+    width: 100%;
+    max-width: 1400px;
+    padding: 2rem;
+    opacity: 0;
+    display: none;
+    transform: translateY(20px); /* 添加初始位移 */
+    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
+                transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: scale(0.98);
+    min-height: calc(100vh - 140px);
+
+}
+
+.start.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    transform: scale(1);
+}
+
+.start-header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 控制文字与图标的间距 */
+    position: relative;
+    width: 100%; /* 确保容器有宽度 */
+}
+
+.version {
+    color: #858585;
+    font-size: 0.9rem;
+}
+
+.start-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#SCE-Logo {
+    width: 30px;
+    height: 30px;
+    margin-left: auto; /* 关键属性：将图标推到最右侧 */
+    order: 2; /* 确保图标在flex容器中始终在最右 */
+    transition: transform 0.3s ease;
+}
+
+.logo::after {
+    content: "SCE-CREATION";
+    display: inline-block;
+    min-width: 120px; /* 根据实际文字长度调整 */
+    font-size: 1.8rem; /* 与原文字大小保持一致 */
+}
+
+#SCE-Logo:hover {
+    transform: 
+        rotate(-15deg) 
+        scale(1.1)
+        translateX(5px);
+}
+
+.action-card {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 15px;/*圆角效果*/
+    padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.action-card:hover {
+    background: #4E5BA8;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(36, 36, 36, 0.3);
+}
+
+.action-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--blue);
+}
+
+.action-card h3 {
+    color: var(--text);
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.action-card p {
+    color: #858585;
+    line-height: 1.6;
+    margin: 0;
+}
