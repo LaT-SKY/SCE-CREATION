@@ -104,9 +104,9 @@ window.addEventListener('load', function() {
         start.classList.add('visible');
         
         // 补偿布局偏移
-        setTimeout(() => {
-            document.body.style.paddingBottom = '60px';
-        }, 800); // 匹配动画持续时间
+        // setTimeout(() => {
+        //     document.body.style.paddingBottom = '60px';
+        // }, 800); // 匹配动画持续时间
     }, { once: true });
 });
 
