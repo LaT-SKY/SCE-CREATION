@@ -1,0 +1,54 @@
+@import url(../theme/light.css);
+@import url(../theme/dark.css);
+
+*{
+  margin: 0;
+  padding: 0;    
+  transition: all 0.3s ease-in-out;
+}
+
+body{
+  background-color: var(--md-sys-color-background);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+img{
+  -webkit-user-select: none;  /* Chrome/Safari/Edge */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* 标准语法 */
+  
+  /* 可选：清除选中时的默认高亮效果 */
+  ::selection {
+    background-color: transparent;
+  }
+}
+p{
+  user-select: none;          /* 标准属性 */
+  -webkit-user-select: none;  /* Safari/Chrome */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE/Edge */
+}
+
+h1{
+  user-select: none;          /* 标准属性 */
+  -webkit-user-select: none;  /* Safari/Chrome */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE/Edge */
+}
+
+h2{
+  user-select: none;          /* 标准属性 */
+  -webkit-user-select: none;  /* Safari/Chrome */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE/Edge */
+}

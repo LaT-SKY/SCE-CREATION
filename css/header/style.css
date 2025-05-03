@@ -1,0 +1,40 @@
+@import url(../theme/dark.css);
+@import url(../theme/light.css);
+
+.header{
+    background-color: var(--md-sys-color-surface);
+    padding: 20px;
+    height: 2rem;
+    border: 2px solid var(--md-sys-color-outline);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.header-title{
+    display: inline-block;
+    font-size: 2em;
+    color:var(--md-sys-color-on-surface);
+    position: relative;
+    bottom: 6px;;
+}
+
+.header-logo{
+    position: absolute;
+    top:18px;
+    right: 20px;
+    background-color: var(--md-sys-color-primary);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: auto;
+    width: 34px;
+    height: 34px;
+    border: 2px solid var(--md-sys-color-outline);
+    cursor: pointer;
+}
+
+.header-logo:hover{
+    transform: rotate(15deg);
+    background-color: var(--md-sys-color-primary-container);
+}

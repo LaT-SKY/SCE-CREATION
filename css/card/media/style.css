@@ -1,0 +1,5 @@
+@media (max-width: 900px) {
+  .card-content {
+    grid-template-columns: minmax(300px, 1fr); /* 移动端单列 */
+  }
+}

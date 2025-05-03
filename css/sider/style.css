@@ -1,0 +1,62 @@
+@import url(../theme/light.css);
+@import url(../theme/dark.css);
+
+.sider {
+    width: 30px;
+    height: 62px;
+    position: fixed;
+    bottom: 20px;    /* 距离底部 20px */
+    right: 20px;     /* 距离右侧 20px */
+    background-color: var(--md-sys-color-primary-fixed);
+
+    border-radius: 15px;       /* 圆角 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 投影 */
+    cursor: pointer;         /* 手型指针 */
+    transition: transform 0.3s ease; /* 悬移动画 */
+
+    border: 2px solid var(--md-sys-color-outline-variant);
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* 悬停效果（可选） */
+.sider:hover {
+    transform: translateY(-3px);
+    /* background-color: var(--md-sys-color-primary-fixed-dim); */
+    /* transition: all 0.3s ease-in-out; */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.back-to-top{
+    width: 90%;
+    height: 40%;
+    position: relative;
+    top:0px;
+    left: 1.5px;
+    cursor: pointer;
+}
+
+.back-to-top:hover{
+    transform:scale(1.2);
+}
+
+.back-to-top:active{
+    transform:scale(0.95);
+}
+
+.more{
+    width: 90%;
+    height: 40%;
+    position: relative;
+    left: 1.5px;
+    top:5px;
+    cursor: pointer;
+}
+
+.more:hover{
+    transform:scale(1.2);
+}
+
+.more:active{
+    transform:scale(0.95);
+}

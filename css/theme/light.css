@@ -1,0 +1,103 @@
+.light {
+  /* ========== 基础主题色 ========== */
+  --md-sys-color-primary: rgb(144 74 72);        
+  /* 主品牌色 - 用于主要按钮、重要图标 */
+  --md-sys-color-on-primary: rgb(255 255 255);   
+  /* 主色上的内容颜色 - 主按钮文字 */
+  --md-sys-color-primary-container: rgb(255 218 216); 
+  /* 次要容器背景 - 次级按钮/卡片背景 */
+  --md-sys-color-on-primary-container: rgb(115 51 50); 
+  /* 容器上的内容 - 次级按钮文字 */
+  
+  /* ========== 辅助主题色 ========== */
+  --md-sys-color-secondary: rgb(119 86 85);      
+  /* 辅助品牌色 - 次要按钮/分割线 */
+  --md-sys-color-on-secondary: rgb(255 255 255); 
+  /* 辅助色上的内容 */
+  --md-sys-color-secondary-container: rgb(255 218 216); 
+  /* 辅助容器背景 */
+  --md-sys-color-on-secondary-container: rgb(93 63 62); 
+  /* 辅助容器内容 */
+  
+  /* ========== 强调色 ========== */
+  --md-sys-color-tertiary: rgb(115 90 46);        
+  /* 强调色 - 高亮元素/提示按钮 */
+  --md-sys-color-on-tertiary: rgb(255 255 255);   
+  /* 强调色内容 */
+  --md-sys-color-tertiary-container: rgb(255 222 170); 
+  /* 强调容器背景 */
+  --md-sys-color-on-tertiary-container: rgb(90 67 25); 
+  /* 强调容器内容 */
+  
+  /* ========== 错误状态 ========== */
+  --md-sys-color-error: rgb(186 26 26);          
+  /* 错误提示色 - 报错信息/危险操作 */
+  --md-sys-color-on-error: rgb(255 255 255);     
+  /* 错误背景上的文字 */
+  --md-sys-color-error-container: rgb(255 218 214); 
+  /* 错误容器背景 */
+  --md-sys-color-on-error-container: rgb(147 0 10); 
+  /* 错误容器文字 */
+  
+  /* ========== 背景与表面 ========== */
+  --md-sys-color-background: rgb(255 248 247);    
+  /* 页面主背景色 */
+  --md-sys-color-on-background: rgb(35 25 25);    
+  /* 背景上的主要内容文字 */
+  --md-sys-color-surface: rgb(255 248 247);       
+  /* 卡片/面板背景 */
+  --md-sys-color-on-surface: rgb(35 25 25);       
+  /* 表面上的常规内容 */
+  
+  /* ========== 表面变体 ========== */
+  --md-sys-color-surface-variant: rgb(244 221 220); 
+  /* 次级表面 - 输入框背景 */
+  --md-sys-color-on-surface-variant: rgb(83 67 66); 
+  /* 次级表面内容 - 输入框文字 */
+  
+  /* ========== 边框与轮廓 ========== */
+  --md-sys-color-outline: rgb(133 115 114);       
+  /* 主要边框/分割线 */
+  --md-sys-color-outline-variant: rgb(215 193 192); 
+  /* 次要边框 - 禁用状态边框 */
+  
+  /* ========== 阴影与遮罩 ========== */
+  --md-sys-color-shadow: rgb(0 0 0);              
+  /* 投影颜色 */
+  --md-sys-color-scrim: rgb(0 0 0);              
+  /* 遮罩层颜色 */
+  
+  /* ========== 反色主题 ========== */
+  --md-sys-color-inverse-surface: rgb(56 46 45);  
+  /* 反色表面背景 */
+  --md-sys-color-inverse-on-surface: rgb(255 237 235); 
+  /* 反色表面内容 */
+  --md-sys-color-inverse-primary: rgb(255 179 176); 
+  /* 反色主题主色 */
+  
+  /* ========== 固定状态颜色 ========== */
+  --md-sys-color-primary-fixed: rgb(255 218 216); 
+  /* 主色固定状态背景 */
+  --md-sys-color-on-primary-fixed: rgb(59 8 11);  
+  /* 固定主色上的文字 */
+  --md-sys-color-primary-fixed-dim: rgb(255 179 176); 
+  /* 主色悬停/按下状态 */
+  
+  /* ========== 亮度层级 ========== */
+  --md-sys-color-surface-dim: rgb(232 214 213);   
+  /* 暗化表面（低亮度模式） */
+  --md-sys-color-surface-bright: rgb(255 248 247); 
+  /* 亮化表面（高亮度模式） */
+  
+  /* ========== 表面容器层级 ========== */
+  --md-sys-color-surface-container-lowest: rgb(255 255 255); 
+  /* 最高层级容器 */
+  --md-sys-color-surface-container-low: rgb(255 240 239);    
+  /* 中高层级容器 */
+  --md-sys-color-surface-container: rgb(252 234 232);        
+  /* 标准层级容器 */
+  --md-sys-color-surface-container-high: rgb(246 228 227);   
+  /* 中低层级容器 */
+  --md-sys-color-surface-container-highest: rgb(240 222 221); 
+  /* 最低层级容器 */
+}

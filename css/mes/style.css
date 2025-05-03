@@ -1,0 +1,63 @@
+@import url("../theme/light.css");
+@import url("../theme/dark.css");
+
+.mes {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 180px; /* 增加总宽度 */
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--md-sys-color-tertiary-container);
+    z-index: 9999;
+    overflow: visible;
+}
+
+/* 图标样式 */
+.mes-icon {
+    position: absolute;
+    left: 0em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 10000; /* 确保图标在上层 */
+}
+.confirm {
+    position: absolute;
+    /* right: calc(-1.5em - 8px) */
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+    width: 30px;
+    height: 30px;
+    z-index: 10000;
+}
+
+.mes p {
+    position: absolute;
+    left: 30px;         /* 避开左侧图标 */
+    right: 30px;        /* 避开右侧按钮 */
+    top: 50%;
+    transform: translateY(-50%);  /* 仅垂直居中 */
+    text-align: center; /* 文字水平居中 */
+    width: auto;        /* 清除原有宽度限制 */
+    overflow: hidden;
+    font-size: 14px;
+    color: var(--md-sys-color-on-tertiary-container);
+    margin: 0;
+    padding: 0;
+    font-weight: 1000;
+}
+
+.mes:hover {
+    transform: translateX(-50%) scale(1.1); /* 保持居中同时放大 */
+    cursor: pointer; /* 可选：显示点击手势 */
+}
+
+/* 点击瞬间的微调（可选） */
+.mes:active {
+    transform: translateX(-50%) scale(0.95); /* 点击时轻微缩小 */
+}

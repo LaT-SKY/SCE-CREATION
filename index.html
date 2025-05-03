@@ -1,86 +1,86 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
+<html class="light"></html>
 <head>
     <meta charset="UTF-8">
-    <title>SCE-CREATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/theme/light.css"> -->
+    <!-- <link rel="stylesheet" href="css/theme/dark.css"> -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/loading.css">
-    <link rel="stylesheet" href="css/start.css">
-    <link rel="stylesheet" href="css/bg.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/card/style.css">
+    <link rel="stylesheet" href="css/header/style.css">
+    <link rel="stylesheet" href="css/card/media/style.css">
+    <link rel="stylesheet" href="css/sider/style.css">
+    <link rel="stylesheet" href="css/mes/style.css">
+    
+    <title>Document</title>
 </head>
 <body>
-
-
-    <div class="loading">
-        <div class="loader"></div>
-        <div class="loading-text">算筹重列，乾坤新演</div>
+    <!-- <button onclick="toggleTheme()">切换主题</button> -->
+    <div class="mes">
+        <img src="assets/svg/mes.svg" alt="MES" class="mes-icon">
+        <div class="mes-container">
+            <p>你收到了一条通知</p>
+        </div>
+        <img src="assets/svg/confirm.svg" alt="" class="confirm">
     </div>
 
 
-    <div id="bg-shapes"></div>
-
-
-    <div class="start">
-        <div class="start-header">
-            <div class="logo">
-                <!-- 支援卡评价器 -->
-                <img src="assets/icons/SCE_ICON_Dynamic.gif" alt="SCE" id="SCE-Logo">
-            </div>
-            <div class="version">V0.1</div>
-        </div>
-        
-        <div class="start-grid">
-            <div class="action-card" id="newCard">
-                <div class="icon">+</div>
-                <h3>创建新的支援卡</h3>
-                <p>从空白模板开始构建全新支援卡</p>
-            </div>
-            
-            <div class="action-card" id="openCard">
-                <div class="icon">📂</div>
-                <h3>打开保存的支援卡</h3>
-                <p>从本地存储加载已保存的配置</p>
-            </div>
-            
-            <div class="action-card" id="parseLink">
-                <div class="icon">🔗</div>
-                <h3>解析链接中的支援卡</h3>
-                <p>从分享链接中还原支援卡配置</p>
-            </div>
-        </div>
+    <div class="header">
+        <h1 class="header-title">SCE-CRAETION</h1>
+        <img src="assets/logo/OracleStar.png" alt="SCE" class="header-logo" onclick="toggleTheme()">
     </div>
-
-
-    <div class="about-modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>SCE-CREATION</h2>
-            <p class="version">版本：V0.1</p>
-            <div class="description">
-                <p>SCE-CREATION 项目旨在为赛马娘玩家提供便捷的支援卡轻度分析工具。</p>
-                <div class="contributor">
-                    <div class="contributors-list">
-                        <a href="https://github.com/LaT-SKY" target="_blank" class="contributor-item">
-                            <img src="https://github.com/LaT-SKY.png" alt="LaT-SKY" class="contributor-avatar">
-                            <span class="contributor-name">LaT-SKY</span>
-                        </a>
-                        <a href="https://github.com/xingguangcuican6666" target="_blank" class="contributor-item">
-                            <img src="https://github.com/xingguangcuican6666.png" alt="xingguangcuican6666" class="contributor-avatar">
-                            <span class="contributor-name">xingguangcuican6666</span>
-                        </a>
-                    </div>
+    <div class="content">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">属性设置</h2>
+                <img src="assets/svg/show.svg" alt="HIDE" class="card-status" onclick="controlcard('parameter','parameter-status')" id="parameter-status">
+                <img src="assets/svg/clear.svg" alt="CLEAR" class="card-clear" onclick="cleargroup(['fs-input','eh-input','tr-input','gat-input','trap-input'])">
+            </div>
+            <div class="card-content" id="parameter">
+                <div class="card-input" id="card-input-fs">
+                    <p>友情加成</p>
+                    <img src="assets/svg/back.svg" alt="BACK" id="fs-back" onclick="clearinput('fs-input')">
+                    <input type="number"class="card-input-field" id="fs-input">
                 </div>
-                <div class="footer-links">
-                    <a href="https://github.com/OracleLoadstar/SCE_Creation_Demo" target="_blank">SCE-CREATION</a>
+                <div class="card-input" id="card-input-eh">
+                    <p>干劲加成</p>
+                    <img src="assets/svg/back.svg" alt="BACK" id="eh-back" onclick="clearinput('eh-input')">
+                    <input type="number" class="card-input-field" id="eh-input">
                 </div>
-                <p class="info">Powered by OracleLoadstar</p>
-                <p class="info">© 2025 OracleLoadstar . All rights reserved.</p>
+                <div class="card-input" id="card-input-tr">
+                    <p>训练加成</p>
+                    <img src="assets/svg/back.svg" alt="BACK" id="tr-back" onclick="clearinput('tr-input')">
+                    <input type="number" class="card-input-field " id="tr-input">
+                </div>
+                <div class="card-input" id="card-input-gat">
+                    <p>得意率</p>
+                    <img src="assets/svg/back.svg" alt="BACK" id="gat-back" onclick="clearinput('gat-input')">
+                    <input type="number" class="card-input-field" id="gat-input">
+                </div>
+                <div class="card-input" id="card-input-trap">
+                    <p>初期羁绊</p>
+                    <img src="assets/svg/back.svg" alt="BACK" id="trap-back" onclick="clearinput('trap-input')">
+                    <input type="number" class="card-input-field" id="trap-input">
+                </div>
+
             </div>
         </div>
     </div>
+    <div class="sider">
+        <div class="back-to-top">
+            <img src="assets/svg/up.svg" alt="UP">
+        </div>
+        <div class="more" onclick="showdog('dog-more-id')" id="more">
+            <img src="assets/svg/bar.svg" alt="BAR">
+        </div>
+    </div>
 
-    
-    <script src="js/script.js"></script>
+
+    <dialog class="dog-more" id="dog-more-id">
+
+    </dialog>
+
+<script src="js/script.js"></script>
 </body>
 </html>

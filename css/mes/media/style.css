@@ -1,0 +1,6 @@
+@media (max-width: 480px) {
+    .mes p {
+        animation-duration: 5s; /* 移动端加快滚动速度 */
+        max-width: 120px;
+    }
+}

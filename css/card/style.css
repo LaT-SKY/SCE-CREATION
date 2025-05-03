@@ -1,0 +1,159 @@
+@import url(../theme/light.css);
+@import url(../theme/dark.css);
+
+.card{
+    background-color: var(--md-sys-color-surface);
+    border: 2px solid var(--md-sys-color-outline);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--md-sys-color-shadow);
+    padding: 16px;
+    margin: 16px;
+    overflow: hidden; /* 确保内容裁剪 */
+    position: relative; /* 为可能的下拉效果准备 */
+    will-change: height, padding; /* 性能优化 */
+    display: block;
+}
+
+.card.collapsed {
+    padding-top: 8px; /* 顶部留出呼吸空间 */
+    padding-bottom: 8px;
+    margin-top: -8px; /* 向上收缩补偿 */
+    margin-bottom: 24px; /* 保持底部间距 */
+}
+
+.card-header{
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--md-sys-color-on-surface);
+    display: inline-block;
+    background-color: var(--md-sys-color-surface-variant);
+    border: 2px solid var(--md-sys-color-outline-variant);
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-header h2{
+    margin: 0;
+    padding-left: 5px;
+    font-size: 1.5em;
+    color: var(--md-sys-color-on-surface-variant);
+    display: inline-block;
+}
+
+.card-header img{
+    width: 1.5rem;
+    position: relative;
+    float: right;
+    padding: 5px;
+    transform-origin: center; /* 确保缩放中心为图像中心 */
+}
+
+.card-header img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    /* 可选：添加放大阴影增强立体感 */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.card-header img:active{
+    transform:scale(0.95);
+}
+
+.card-content{
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--md-sys-color-on-surface);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr)); /* 等宽列 */    justify-content: center; /* 水平居中 */
+    background-color: var(--md-sys-color-surface);
+    border: 2px solid var(--md-sys-color-outline);
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+    max-height: 1000px; /* 足够大的初始值 */
+    transition: 
+        max-height 0.3s ease-out,
+        opacity 0.2s linear,
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+}
+
+.card-content.hide {
+    max-height: 0 !important; /* 强制覆盖 */
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-width: 2;
+    transform: translateY(-8px); /* 微调视觉对齐 */
+}
+
+.card-animation {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-animation.hide {
+    opacity: 0;
+    transform: translateY(-20px); /* 向上移动距离 */
+    pointer-events: none; /* 禁用交互 */
+}
+
+.card-input{
+    font-size: 0.8rem;
+    color: var(--md-sys-color-on-surface-variant);
+    display: inline-block;
+    background-color: var(--md-sys-color-surface);
+    border: 2px solid var(--md-sys-color-outline);
+    border-radius: 15px;
+    /* width: 40%; */
+    height: 3rem;
+    overflow: hidden;
+    width: 90%; /* 占满网格轨道 */
+    max-width: 400px; /* 控制最大宽度 */
+    margin: 0.8rem 0;
+    justify-self: center; /* 轨道内居中 */
+    display: block; /* 移除 inline-block */
+}
+
+.card-input p{
+    margin: 0;
+    padding-left: 5px;
+    color: var(--md-sys-color-on-surface-variant);
+    display: inline-block;
+}
+
+.card-input img{
+    width: 1rem;
+    position: relative;
+    top:2px;
+    left: 5px;
+    background-color: rgb(255 248 247);
+    border-radius: 0.2rem;
+}
+
+.card-input img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.card-input img:active{
+    transform:scale(0.95);
+}
+
+.card-input input{
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--md-sys-color-on-surface);
+    font-size: 1rem;
+    padding-left: 5px;
+    position: relative;
+    bottom:calc(0.5rem + 2px);
+}
